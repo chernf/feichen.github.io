@@ -1,0 +1,270 @@
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #606770;
+  --line: #e6e6e6;
+  --link: #0b4aa2;
+  --max: 1120px;
+  --sidebar: 260px;
+  --radius: 14px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a{ color: var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+.skip{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip:focus{
+  position: fixed;
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  z-index: 50;
+}
+
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.layout{
+  display: flex;
+  gap: 0;
+}
+
+.sidebar{
+  width: var(--sidebar);
+  padding: 22px 16px 30px 0;
+  border-right: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+.brand{
+  padding: 6px 12px 16px;
+}
+.brand .name{
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  margin: 0;
+}
+.brand .meta{
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.menu{
+  padding: 0 12px 16px;
+  font-size: 14px;
+}
+
+.menu a{
+  display: block;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+.menu a.active{
+  font-weight: 650;
+  color: var(--text);
+  background: #f7f7f7;
+}
+.menu a:hover{
+  background: #f3f5f7;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.menu .section{
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0 8px;
+}
+
+.content{
+  flex: 1;
+  padding: 28px 0 44px 26px;
+  min-width: 0;
+}
+
+h1{
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+h2{
+  font-size: 18px;
+  margin: 22px 0 10px;
+}
+
+p{ margin: 10px 0; }
+
+.muted{ color: var(--muted); }
+
+.hr{
+  height: 1px;
+  background: var(--line);
+  margin: 18px 0;
+}
+
+.banner{
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: block;
+  margin: 8px 0 16px;
+}
+
+.profile{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: start;
+  margin-top: 6px;
+}
+
+.avatar{
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: #fafafa;
+}
+
+.kv{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kv li{
+  margin: 6px 0;
+}
+
+/* Media rows with thumbnails (books/papers/students) */
+.media{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 12px 0;
+}
+
+.thumb{
+  width: 74px;
+  height: 96px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  object-fit: cover;
+  background: #fafafa;
+  flex: 0 0 auto;
+}
+
+.thumb.square{
+  width: 64px;
+  height: 64px;
+}
+
+.media .title{
+  font-weight: 650;
+}
+
+.media .meta{
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+ul, ol{ padding-left: 20px; }
+li{ margin: 6px 0; }
+
+.note{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer{
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Student pages (no sidebar) */
+.student-header{
+  padding: 18px 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+.student-nav{
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.student-nav a{ margin-right: 10px; }
+
+.student-content{
+  padding: 22px 0 44px;
+}
+
+@media (max-width: 920px){
+  .layout{ flex-direction: column; }
+  .sidebar{
+    position: relative;
+    height: auto;
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0 12px;
+  }
+  .content{ padding: 18px 0 40px; }
+  .menu{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .menu .section{
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 520px){
+  .profile{ grid-template-columns: 1fr; }
+  .avatar{ width: 108px; height: 108px; border-radius: 12px; }
+  h1{ font-size: 24px; }
+  .menu{ grid-template-columns: 1fr; }
+}
