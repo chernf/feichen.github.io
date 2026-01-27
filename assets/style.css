@@ -191,6 +191,26 @@ p{ margin: 12px 0; }
 }
 .kv li{ margin: 8px 0; }
 
+/* Alumni list */
+.alumni{
+  margin: 10px 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.alumni li{
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.alumni li:last-child{
+  border-bottom: none;
+}
+
+.alumni strong{
+  font-weight: 700;
+}
+
 .inline-links{
   font-size: 15px;
 }
