@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Professor Fei Chen — Distributed optimization</title>
+<meta content="Academic personal webpage." name="description"/>
+<link href="assets/style.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<div class="layout">
+<aside aria-label="Site navigation" class="sidebar">
+<div class="brand">
+<p class="name">Professor Fei Chen</p>
+<div class="title">Principal Investigator, LICS</div>
+<div class="meta"><a href="https://aien.nankai.edu.cn/" rel="noopener" target="_blank">College of AI</a>, <a href="https://en.nankai.edu.cn/" rel="noopener" target="_blank">Nankai University</a><br/>Tianjin, China</div>
+</div>
+<nav class="menu">
+<a class="" href="index.html">Home</a>
+<a class="" href="contact.html">Contact</a>
+<a class="" href="bio.html">Biography</a>
+<div class="section">Research</div>
+<a class="" href="group.html">Group</a>
+<a class="" href="openings.html">Openings</a>
+<a class="" href="books.html">Books</a>
+<a class="" href="publications.html">Publications</a>
+<div class="section">Teaching</div>
+<a class="" href="teaching.html">Courses</a>
+</nav>
+</aside>
+<main class="content" id="main">
+<img alt="LICS banner" class="banner" src="assets/banner.jpg"/>
+<h1>Distributed optimization</h1><p class="muted"><a href="index.html#research">← Back to Research interests</a></p>
+<p class="muted">
+  Many networked systems need to optimize a global objective (e.g., resource allocation, economic dispatch) without a central controller.
+  Distributed optimization designs algorithms where each agent uses <strong>local computation</strong> and <strong>neighbor communication</strong>
+  to jointly minimize a global cost with provable guarantees.
+</p>
+<img alt="Distributed optimization header illustration" class="hero" src="assets/research/optimization.jpg"/>
+<h2>Core questions</h2>
+<ul>
+<li>How to solve <strong>min ∑ f<sub>i</sub>(x)</strong> with limited communication?</li>
+<li>How to handle constraints, delays, packet drops, and directed/unbalanced networks?</li>
+<li>How to improve convergence speed with communication-efficient protocols?</li>
+</ul>
+<h2>Illustrations</h2>
+<div class="grid grid2">
+<div class="card">
+<img alt="Animated illustration of distributed optimization on a simple objective" src="assets/research-pages/optimization_descent.gif"/>
+<div class="pad">
+<h3>Cooperative descent</h3>
+<p>Agents combine local gradients with neighbor information to approach a shared optimizer.</p>
+</div>
+</div>
+<div class="card">
+<img alt="Networked optimization diagram showing local objectives and message passing" src="assets/research-pages/optimization_network.jpg"/>
+<div class="pad">
+<h3>Networked model</h3>
+<p>Local objectives and messages over a graph drive the global decision variable toward optimality.</p>
+</div>
+</div>
+</div>
+<h2>Typical applications</h2>
+<ul>
+<li>Economic dispatch and resource allocation (energy, transportation, manufacturing).</li>
+<li>Distributed estimation, sensor fusion, and multi-agent decision-making.</li>
+<li>Optimization-driven control and learning in large-scale networks.</li>
+</ul>
+<h2>Related reading</h2><ul class="reading"><li><a href="https://doi.org/10.1016/j.automatica.2020.109156" rel="noopener" target="_blank">Sign projected gradient flow: A continuous-time approach to convex optimization with linear equality constraints</a> (Automatica, 2020).</li><li><a href="https://doi.org/10.1109/TAC.2021.3131678" rel="noopener" target="_blank">A scaling-function approach for distributed constrained optimization in unbalanced multi-agent networks</a> (IEEE TAC, 2022).</li><li><a href="https://doi.org/10.1016/j.automatica.2020.109356" rel="noopener" target="_blank">Distributed economic dispatch via a predictive scheme: heterogeneous delays and privacy preservation</a> (Automatica, 2021).</li><li><a href="https://scholar.google.com/scholar?q=Boyd%20Parikh%20Chu%20Peleato%20Eckstein%20distributed%20optimization%20and%20statistical%20learning%20via%20the%20alternating%20direction%20method%20of%20multipliers%202011" rel="noopener" target="_blank">Distributed optimization and statistical learning via the alternating direction method of multipliers</a> (FnT ML, 2011).</li><li><a href="https://scholar.google.com/scholar?q=Nedic%20Ozdaglar%20distributed%20subgradient%20methods%20for%20multi-agent%20optimization%202009%20IEEE%20Transactions%20on%20Automatic%20Control" rel="noopener" target="_blank">Distributed subgradient methods for multi-agent optimization</a> (IEEE TAC, 2009).</li></ul>
+<p class="muted">Interested in joining? See <a href="openings.html">Openings</a>.</p>
+<div class="footer">© 2026 Professor Fei Chen · Laboratory for Information and Control Systems (LICS)</div>
+</main>
+</div>
+</div>
+</body>
+</html>
