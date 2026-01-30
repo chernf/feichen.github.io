@@ -147,6 +147,33 @@ a:visited{ color: #4e2376; }
   padding: 26px 0 54px 30px;
   min-width: 0;
 }
+/* Academic-style text alignment (justify) */
+.content{
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.content p,
+.content li,
+.content dd{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Keep headings and UI bits aligned normally */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content .kicker,
+.content .meta,
+.content .pill,
+.content .badge{
+  text-align: left;
+}
+
 
 h1{
   font-family: var(--font-serif);
