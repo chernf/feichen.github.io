@@ -110,6 +110,22 @@ a:visited{ color: #4e2376; }
   color: var(--muted);
 }
 
+
+
+.brand .social{
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.2;
+}
+.brand .social a{
+  font-weight: 600;
+}
+.brand .social .sep{
+  margin: 0 8px;
+  opacity: 0.85;
+}
+
 .menu{
   padding: 0 12px 16px;
   font-size: 20px;
